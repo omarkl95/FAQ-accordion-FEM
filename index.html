@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --light-pink: hsl(275, 100%, 97%);
+      --grayish-purple: hsl(292, 16%, 49%);
+      --dark-purple: hsl(292, 42%, 14%);
+    }
+
+    @font-face {
+      font-family: "Work Sans";
+      src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+    }
+
+    body {
+      background-color: var(--light-pink);
+      font: 16px "Work Sans", sans serif;
+      height: 100vh;
+      overflow-x: hidden;
+      width: 100vw;
+    }
+
+    header {
+      background: url("./assets/images/background-pattern-desktop.svg") center / cover no-repeat;
+      height: 16rem;
+      width: 100%;
+    }
+
+    main {
+      background-color: var(--white);
+      border-radius: .5rem;
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      margin: -12vh auto 0 auto;
+      max-width: 20rem;
+      padding: 1.5rem;
+      user-select: none;
+    }
+
+    main div {
+      display: flex;
+      flex-direction: row;
+    }
+
+    img#star {
+      width: 1.5rem;
+    }
+
+    main h1 {
+      color: var(--dark-purple);
+      font-weight: 700;
+      padding-left: 1.8rem;
+    }
+
+    .toggle:first-of-type:focus {
+      color: var(--grayish-purple);
+    }
+
+    section {
+      padding: 1.3rem 0;
+    }
+
+    section:last-of-type {
+      padding-bottom: 0;
+    }
+
+    section div {
+      justify-content: space-between;
+    }
+
+    main h2 {
+      color: var(--dark-purple);
+      font-size: 1em;
+      font-weight: 700;
+      padding-right: 2rem;
+    }
+
+    main h2:hover {
+      color: var(--grayish-purple)
+    }
+
+    img.icon:hover {
+      cursor: pointer;
+    }
+
+    main p {
+      color: var(--grayish-purple);
+      display: none;
+      font-size: .87em;
+      font-weight: 400;
+      line-height: 1.5em;
+      padding-top: 1.8rem;
+    }
+
+    footer {
+      font: .9em "Work Sans";
+      padding: 3rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--dark-purple);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer p {
+      padding-bottom: .5rem;
+    }
+
+    @media screen and (min-width: 700px) {
+      header {
+        background-image: url("../assets/images/background-pattern-desktop.svg");
+      }
+
+      main {
+        margin-top: -14vh;
+        max-width: 30rem;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      main {
+        max-width: 32rem;
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      header {
+        background-image: url("./assets/images/background-pattern-desktop.svg");
+        height: 18rem;
+      }
+
+      main {
+        margin-top: -17vh;
+        max-width: 37rem;
+        padding: 2.5rem;
+      }
+
+      img#star {
+        width: 2rem;
+      }
+
+      main h1 {
+        font-size: 3em;
+      }
+
+      section {
+        padding-top: 2rem;
+      }
+
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+
+  <main>
+    <div>
+      <img src="./assets/images/icon-star.svg" alt="star" id="star">
+      <h1>FAQs</h1>
+    </div>
+
+    <section>
+      <div class="toggle">
+        <h2>What is Frontend Mentor, and how will it help me?</h2>
+        <img src="./assets/images/icon-plus.svg" class="icon">
+      </div>
+      <div>
+        <p class="answer">
+          Frontend Mentor offers realistic coding challenges to help developers improve their
+          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+          all levels and ideal for portfolio building.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="toggle">
+        <h2>Is Frontend Mentor free?</h2>
+        <img src="./assets/images/icon-plus.svg" class="icon">
+      </div>
+      <div>
+        <p class="answer">
+          Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+          option providing access to a range of projects suitable for all skill levels.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="toggle">
+        <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
+        <img src="./assets/images/icon-plus.svg" class="icon">
+      </div>
+      <div>
+        <p class="answer">
+          Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="toggle">
+        <h2>How can I get help if I'm stuck on a challenge?</h2>
+        <img src="./assets/images/icon-plus.svg" class="icon">
+      </div>
+      <div>
+        <p class="answer">
+          The best place to get help is inside Frontend Mentor's Discord community. There's a help
+          channel where you can ask questions and seek support from other community members.
+        </p>
+      </div>
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Omar Kamal</a>.
+  </div>
+
+  <script>
+    const toggles = document.querySelectorAll('.toggle')
+
+    for (let i = 0; i < toggles.length; i++) {
+      toggles[i].addEventListener('click', toggle)
+    }
+
+    function toggle() {
+      const answer = this.parentNode.querySelector('.answer');
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        this.querySelector('.icon').setAttribute('src', './assets/images/icon-plus.svg')
+      } else {
+        answer.style.display = 'block';
+        this.querySelector('.icon').setAttribute('src', './assets/images/icon-minus.svg')
+      }
+    }
+  </script>
+</body>
+
+</html>
